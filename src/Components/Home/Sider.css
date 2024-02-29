@@ -1,0 +1,31 @@
+/* Slider.css */
+.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .inactive {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  /* Add transition to create a smooth animation effect */
+  .active, .inactive {
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .btn{
+    background: none;
+    height: 20px;
+  }
+  .btn:hover{
+    background-color: white;
+  }
+  .icon{
+    /* width: 20px; */
+    font-size: 50px;
+  }
+  .img{
+    /* width: 90%; */
+    border-radius: 30px;
+  }

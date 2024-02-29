@@ -21,12 +21,17 @@ export const MenuComponent = ({ value,className }) => {
         rightIcon={<ChevronDownIcon />}
         onMouseEnter={handleOpen}
         className={className}
-        //   onMouseLeave={handleClose}
+          onMouseLeave={handleClose}
         onClick={(prev)=>setIsOpen(prev? true:false)}
       >
         US
       </MenuButton>
-      <MenuList>
+      <MenuList
+      margin={"-7px"}
+      onMouseEnter={handleOpen}
+      onMouseLeave={handleClose}
+      autoFocus={false}
+      >
         {value.map((e, index) => (
           <MenuItem key={index}>{e}</MenuItem>
         ))}

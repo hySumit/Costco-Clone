@@ -7,3 +7,10 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+
+.round-b{
+    margin-top: 10px;
+    border: 1.4px solid #DADADA;
+    border-radius: 10px;
+    
+}
