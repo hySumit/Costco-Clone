@@ -22,6 +22,7 @@ Frontend Costco Clone Using React & Talwind-css
 - Authentication
 - Pop-ups For Login and Signup
 - Resposive slider
+- SideBars
 
 ## Home Page :
 ![Screenshot 2024-03-04 115148](https://github.com/hySumit/Costco-Clone/assets/112721086/53bf82cf-b53e-465d-bf0f-981c0abfc032)
