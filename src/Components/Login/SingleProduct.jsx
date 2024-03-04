@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { jsonData } from "../../../db";
 import Navbar from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
@@ -19,18 +19,16 @@ export const SingleProduct = () => {
 
   const AddToCart = () => {
     if (isAuth) {
-      const oldItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      const oldItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
       if (Array.isArray(oldItems)) {
         oldItems.push(product);
-        localStorage.setItem('cartItems', JSON.stringify(oldItems));
+        localStorage.setItem("cartItems", JSON.stringify(oldItems));
         console.log("Item added to cart:", product);
       } else {
-        
         console.log("'cartItems' in localStorage is not an array");
       }
     } else {
-      
       console.log("User is not authenticated");
     }
   };
@@ -38,17 +36,21 @@ export const SingleProduct = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-around items-center">
+      <div className="flex justify-around items-center mb-[-200px]">
+      <img src={product.image} alt={product.name} width={"300px"} />
         <div className="products">
-          <h1>Name - {product.name}</h1>
-          <p>$ {product.price}</p>
-          <img src={product.image} alt={product.name} width={"300px"} />
+          <p> Item Name : {product.name} </p>
+          <p>Brand : {product.brand}</p>
+          <p>Description : {product.description}</p>
+          <p>Rating: {product.rating}</p>
+          <p className="text-red-500">Discount : $ {product.discount}</p>
+          <p>Price : $ {product.price}</p>
+          
         </div>
 
         <div>
           <p>Delivery</p>
           <div>
-            
             <TbTruckDelivery />
             <p className="text-green-800 font-bold">
               Earliest Wednesday, March 6{" "}
@@ -58,6 +60,7 @@ export const SingleProduct = () => {
               Delivery ZIP Code: 845438{" "}
               <span className="text-blue-500 hover:underline">Change</span>
             </p>
+            <div className="flex gap-3">
 
             <button
               onClick={AddToCart}
@@ -65,6 +68,10 @@ export const SingleProduct = () => {
             >
               Add to Cart
             </button>
+            <Link  className="bg-green-500 text-white p-2 rounded hover:bg-blue-700" to={"/cart"} >
+              Go to Cart
+            </Link>
+            </div>
           </div>
         </div>
       </div>
