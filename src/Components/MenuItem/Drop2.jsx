@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-export const Dropdown = ({ val, colors, icon }) => {
+export const Drop2 = ({ data, colors, icon }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
-    <Menu isLazy isOpen={open} onClose={handleClose}  >
+    <Menu isLazy isOpen={open} onClose={handleClose}>
       <MenuButton
         onMouseEnter={handleOpen}
         onMouseLeave={handleClose}
         onClick={() => setOpen(!open)}
       >
-        <div className="flex items-center" >
-        {icon} 
-        {val}
+        <div className="flex items-center">
+          {icon}
         </div>
       </MenuButton>
       <MenuList
@@ -25,10 +25,11 @@ export const Dropdown = ({ val, colors, icon }) => {
         autoFocus={false}
         margin={"-6px"}
       >
-        
-        <MenuItem style={colors} >New Window</MenuItem>
-        <MenuItem style={colors} >Open Closed Tab</MenuItem>
-        <MenuItem style={colors} >Open File</MenuItem>
+        {data.map((item, index) => (
+          <MenuItem key={index} style={colors}>
+            <Link to={`/${item.toLowerCase()}`}>{item}</Link>
+          </MenuItem>
+        ))}
       </MenuList>
     </Menu>
   );

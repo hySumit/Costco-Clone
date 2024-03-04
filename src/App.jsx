@@ -1,28 +1,29 @@
-import { useState } from 'react'
-import { Navbar } from './Components/Navbar/Navbar'
-import { Home } from './Components/Home/Home'
-import SlideImages from './Components/Home/Slider'
-import { Products } from './Components/Products/Products'
-import { Delivery } from './Components/DeliveryPage/Delivery'
-import { Products2 } from './Components/Products/Products2'
-import { Slider2 } from './Components/Home/Slider2'
-import { ProductGrid } from './Components/Products/ProductGrid'
+
+import Login from './Components/Login/Login'
+import { Allroutes } from './Components/Routes/Allroutes'
+import { Route, Routes } from 'react-router-dom'
+import { Signup } from './Components/Login/Signup'
+import { Cart } from './Components/Login/Cart'
+import { useContext } from 'react'
+import { AuthContext } from './Components/AuthContext/AuthContext'
+import { SingleProduct } from './Components/Login/SingleProduct'
 
 // import './App.css'
 
 function App() {
+  const {isAuth} = useContext(AuthContext)
 
 
   return (
     <>
-    <Navbar/>
-    <Home/>
-    <SlideImages/>
-    <Products/>
-    <Delivery/>
-    <Products2/>
-    <Slider2/>
-    <ProductGrid/>
+    <Routes>
+      <Route path='/' element={<Allroutes/>}/>
+
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/cart' element={isAuth ? <Cart/> : <Login/>}/>
+      <Route path='/product/:productId' element={<SingleProduct />} />
+    </Routes>
     </>
   )
 }
