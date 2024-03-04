@@ -7,7 +7,12 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-
+/* .paragraphs{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+} */
+.bxbx{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .round-b{
     margin-top: 10px;
     border: 1.4px solid #DADADA;

@@ -2,7 +2,7 @@ export const jsonData= [
     {
       "product_id": 1,
       "name": "Tabel",
-      "description": "High-end smartphone with advanced features.",
+      "description": "A Good Table for your House.",
       "price": 599.99,
       "unit": "Piece",
       "image": "https://mobilecontent.costco.com/live/resource/img/24w06095/24w06095_item_drivers_spring_spotlight_day7_outdoor_dining.jpg",
@@ -27,7 +27,7 @@ export const jsonData= [
     {
       "product_id": 2,
       "name": "QUEEN MATTRESS",
-      "description": "Powerful laptop for work and gaming.",
+      "description": "A Good Bed Help you to sleep better.",
       "price": 999.99,
       "unit": "Piece",
       "image": "https://mobilecontent.costco.com/live/resource/img/24w06095/24w06095_item_drivers_spring_spotlight_day7_sealy.jpg",
@@ -52,7 +52,7 @@ export const jsonData= [
     {
       "product_id": 3,
       "name": "SOAP DISPENSER",
-      "description": "Premium wireless headphones with noise-cancellation.",
+      "description": "A good Soap Dispenser that saves your liquid.",
       "price": 149.99,
       "unit": "Piece",
       "image": "https://mobilecontent.costco.com/live/resource/img/24w06095/24w06095_item_drivers_spring_spotlight_day7_soap.jpg",
@@ -77,7 +77,7 @@ export const jsonData= [
     {
       "product_id": 4,
       "name": "OUTDOOR SEATING SET",
-      "description": "Feature-packed smartwatch with fitness tracking.",
+      "description": "Some Times you have to Calm in the Outdoor.",
       "price": 199.99,
       "unit": "Piece",
       "image": "https://mobilecontent.costco.com/live/resource/img/24w06095/24w06095_item_drivers_spring_spotlight_day7_seating_set.jpg",
