@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <div className="mt-16 md:mt-32 lg:mt-48 xl:mt-64 m-auto bg-[#EEEEEE]">
       <div className="top flex flex-wrap justify-evenly pt-8 pb-8">
-        {/* ... your existing top content ... */}
+       
         <div className="top-child ">
           <h1>Customer Service</h1>
           <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ export const Footer = () => {
       <hr className="border-t border-gray-300 my-4" />
 
       <footer className="flex flex-wrap justify-evenly bg-[#EEEEEE] ">
-        {/* ... your existing footer content ... */}
+        
         <div className="">
           <h1 className="font-bold text-1xl" >About Us</h1>
           <p className="hover:underline" href="#">Charitable Contributions</p>
@@ -131,7 +131,6 @@ export const Footer = () => {
 
       <footer className="footer2 bg-[#EEEEEE] text-center">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 lg:gap-12 xl:gap-16">
-          {/* ... your existing footer2 content ... */}
           <p className="hover:underline" >Site Map</p>
           <p className="hover:underline" >Terms and Conditions</p>
           <p className="hover:underline" >Your Privacy Rights</p>
